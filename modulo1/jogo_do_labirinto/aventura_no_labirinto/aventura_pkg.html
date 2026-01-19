@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: package aventura_pkg</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">aventura_pkg</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cpdita000%5Cdocuments%5Cgithub%5Cdesenvolve-python-intermediario%5Cmodulo1%5Cjogo_do_labirinto%5Caventura_no_labirinto%5Caventura_pkg%5C__init__.py">c:\users\pdita000\documents\github\desenvolve-python-intermediario\modulo1\jogo_do_labirinto\aventura_no_labirinto\aventura_pkg\__init__.py</a></td></tr></table>
+    <p><span class="code">Pacote&nbsp;aventura_pkg<br>
+Contém&nbsp;módulos&nbsp;para&nbsp;controlar&nbsp;o&nbsp;jogo&nbsp;Aventura&nbsp;no&nbsp;Labirinto:<br>
+-&nbsp;jogador:&nbsp;movimentação&nbsp;e&nbsp;pontuação&nbsp;do&nbsp;jogador<br>
+-&nbsp;labirinto:&nbsp;criação&nbsp;e&nbsp;impressão&nbsp;do&nbsp;labirinto<br>
+-&nbsp;utils:&nbsp;funções&nbsp;auxiliares&nbsp;como&nbsp;menu,&nbsp;instruções&nbsp;e&nbsp;tela&nbsp;final</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Package Contents</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="aventura_pkg.jogador.html">jogador</a><br>
+</td><td class="multicolumn"><a href="aventura_pkg.labirinto.html">labirinto</a><br>
+</td><td class="multicolumn"><a href="aventura_pkg.utils.html">utils</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-criar_labirinto"><strong>criar_labirinto</strong></a>(linhas: int, colunas: int) -&gt; list</dt><dd><span class="code">Cria&nbsp;um&nbsp;labirinto&nbsp;aleatório&nbsp;representado&nbsp;por&nbsp;uma&nbsp;matriz&nbsp;(lista&nbsp;de&nbsp;listas).<br>
+&nbsp;<br>
+Regras:<br>
+-&nbsp;'#'&nbsp;representa&nbsp;paredes<br>
+-&nbsp;'.'&nbsp;representa&nbsp;caminhos&nbsp;livres<br>
+-&nbsp;'⭐'&nbsp;representa&nbsp;itens&nbsp;coletáveis<br>
+-&nbsp;As&nbsp;bordas&nbsp;do&nbsp;labirinto&nbsp;são&nbsp;sempre&nbsp;paredes<br>
+-&nbsp;A&nbsp;posição&nbsp;inicial&nbsp;(1,&nbsp;1)&nbsp;é&nbsp;garantida&nbsp;como&nbsp;caminho&nbsp;livre<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;linhas&nbsp;(int):&nbsp;Número&nbsp;de&nbsp;linhas&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;colunas&nbsp;(int):&nbsp;Número&nbsp;de&nbsp;colunas&nbsp;do&nbsp;labirinto.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;Matriz&nbsp;representando&nbsp;o&nbsp;labirinto.</span></dd></dl>
+ <dl><dt><a name="-imprimir_instrucoes"><strong>imprimir_instrucoes</strong></a>()</dt><dd><span class="code">Mostra&nbsp;as&nbsp;instruções&nbsp;do&nbsp;jogo.</span></dd></dl>
+ <dl><dt><a name="-imprimir_labirinto"><strong>imprimir_labirinto</strong></a>(labirinto: list, jogador: dict) -&gt; None</dt><dd><span class="code">Imprime&nbsp;o&nbsp;labirinto&nbsp;no&nbsp;terminal,&nbsp;desenhando&nbsp;o&nbsp;jogador&nbsp;na&nbsp;posição&nbsp;atual.<br>
+&nbsp;<br>
+Observação:<br>
+-&nbsp;O&nbsp;jogador&nbsp;NÃO&nbsp;é&nbsp;armazenado&nbsp;dentro&nbsp;da&nbsp;matriz&nbsp;do&nbsp;labirinto.<br>
+-&nbsp;Ele&nbsp;é&nbsp;desenhado&nbsp;apenas&nbsp;visualmente&nbsp;no&nbsp;momento&nbsp;da&nbsp;impressão.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labirinto&nbsp;(list):&nbsp;Matriz&nbsp;do&nbsp;labirinto.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;Dicionário&nbsp;contendo&nbsp;a&nbsp;posição&nbsp;atual&nbsp;do&nbsp;jogador.</span></dd></dl>
+ <dl><dt><a name="-imprimir_menu"><strong>imprimir_menu</strong></a>(nome_jogador)</dt><dd><span class="code">Imprime&nbsp;o&nbsp;menu&nbsp;inicial&nbsp;do&nbsp;jogo&nbsp;e&nbsp;retorna&nbsp;a&nbsp;opção&nbsp;escolhida.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome_jogador&nbsp;(str):&nbsp;nome&nbsp;do&nbsp;jogador<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;opção&nbsp;escolhida</span></dd></dl>
+ <dl><dt><a name="-iniciar_jogador"><strong>iniciar_jogador</strong></a>(nome: str, color: str = 'cyan') -&gt; dict</dt><dd><span class="code">Inicializa&nbsp;o&nbsp;jogador&nbsp;com&nbsp;nome,&nbsp;posição&nbsp;inicial&nbsp;e&nbsp;pontuação.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nome&nbsp;(str):&nbsp;nome&nbsp;do&nbsp;jogador<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;(str):&nbsp;cor&nbsp;usada&nbsp;para&nbsp;exibir&nbsp;o&nbsp;jogador&nbsp;(rich)<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;dicionário&nbsp;com&nbsp;o&nbsp;estado&nbsp;inicial&nbsp;do&nbsp;jogador</span></dd></dl>
+ <dl><dt><a name="-mover"><strong>mover</strong></a>(jogador: dict, direcao: str, labirinto: list) -&gt; None</dt><dd><span class="code">Move&nbsp;o&nbsp;jogador&nbsp;no&nbsp;labirinto&nbsp;de&nbsp;acordo&nbsp;com&nbsp;a&nbsp;direção&nbsp;informada.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;estado&nbsp;atual&nbsp;do&nbsp;jogador<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direcao&nbsp;(str):&nbsp;tecla&nbsp;pressionada&nbsp;(w,&nbsp;a,&nbsp;s,&nbsp;d)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labirinto&nbsp;(list):&nbsp;matriz&nbsp;do&nbsp;labirinto</span></dd></dl>
+ <dl><dt><a name="-pontuar"><strong>pontuar</strong></a>(jogador: dict) -&gt; None</dt><dd><span class="code">Atualiza&nbsp;a&nbsp;pontuação&nbsp;do&nbsp;jogador&nbsp;ao&nbsp;coletar&nbsp;uma&nbsp;estrela.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;jogador&nbsp;(dict):&nbsp;estado&nbsp;atual&nbsp;do&nbsp;jogador</span></dd></dl>
+ <dl><dt><a name="-resolver_labirinto"><strong>resolver_labirinto</strong></a>(labirinto, x, y, visitado=None, caminho=None)</dt><dd><span class="code">Função&nbsp;recursiva&nbsp;que&nbsp;tenta&nbsp;encontrar&nbsp;uma&nbsp;saída&nbsp;no&nbsp;labirinto.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;labirinto&nbsp;(list):&nbsp;matriz&nbsp;do&nbsp;labirinto<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;linha&nbsp;atual<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;coluna&nbsp;atual<br>
+&nbsp;&nbsp;&nbsp;&nbsp;visitado&nbsp;(set):&nbsp;posições&nbsp;já&nbsp;visitadas<br>
+&nbsp;&nbsp;&nbsp;&nbsp;caminho&nbsp;(list):&nbsp;lista&nbsp;de&nbsp;movimentos<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list&nbsp;|&nbsp;None:&nbsp;lista&nbsp;de&nbsp;movimentos&nbsp;ou&nbsp;None&nbsp;se&nbsp;não&nbsp;houver&nbsp;saída</span></dd></dl>
+ <dl><dt><a name="-tela_final"><strong>tela_final</strong></a>(jogador)</dt></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>__all__</strong> = ['iniciar_jogador', 'mover', 'pontuar', 'criar_labirinto', 'imprimir_labirinto', 'contar_estrelas', 'imprimir_menu', 'imprimir_instrucoes', 'tela_final', 'resolver_labirinto']</td></tr></table>
+</body></html>
